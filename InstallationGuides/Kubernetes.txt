@@ -39,3 +39,11 @@ kubectl set image deployments/kubernetes-bootcamp kubernetes-bootcamp=jocatalin/
 kubectl rollout status deployments/kubernetes-bootcamp
 
 kubectl rollout undo deployments/kubernetes-bootcamp
+
+
+#To Remove and restart Kubernetes which is done previously#
+
+kubeadm reset
+sudo apt-get purge kubeadm kubectl kubelet kubernetes-cni kube*   
+sudo apt-get autoremove  
+sudo rm -rf ~/.kube
